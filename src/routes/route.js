@@ -1,8 +1,33 @@
 const express = require('express');
+
+
+
+
 const router = express.Router();
 // const UserModel= require("../models/userModel.js")
 const UserController= require("../controllers/userController")
 const BookController= require("../controllers/bookController")
+
+
+router.get("/middleware", function (req, res) {
+    res.send("Finally it's working!")
+});
+
+router.get("/user", function (req, res) {
+    res.send("2nd API works perfect!")
+});
+
+router.get("/handler", function (req, res) {
+    res.send("3rd API works perfect!")
+})
+
+
+
+
+
+
+
+
 
 router.get("/test-me", function (req, res) {
     res.send("My first ever api!")
